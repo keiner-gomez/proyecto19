@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reddit de temu</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+    <div id="app-container">
+        <!-- Los carriles se inyectan aquí -->
+        <div id="lanes-wrapper" style="display: flex; gap: 20px;"></div>
+
+        <!-- Botón de añadir (+) -->
+        <button class="add-lane-btn" id="open-modal-btn">+</button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-box">
+            <h3>Ingresa el nombre del subReddit</h3>
+            <input type="text" id="subreddit-input" placeholder="e.g. javascript" autocomplete="off">
+            <button id="add-subreddit-btn">Agregar subReddit</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

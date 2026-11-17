@@ -1,0 +1,219 @@
+/* Estilos básicos, sin adornos, inspirados en el wireframe */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        #app-container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            overflow-x: auto;
+            min-height: 80vh;
+        }
+
+        /* Estilos de la Columna / Carril */
+        .lane {
+            width: 300px;
+            flex-shrink: 0;
+            border: 2px solid #000;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lane-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            border-bottom: 2px solid #000;
+            font-weight: bold;
+            font-style: italic;
+            position: relative;
+        }
+
+        /* Menú de 3 puntos */
+        .menu-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0 5px;
+            line-height: 1;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 10px;
+            border: 2px solid #000;
+            border-radius: 8px;
+            background: #fff;
+            z-index: 10;
+            width: 120px;
+            overflow: hidden;
+        }
+
+        .dropdown-menu.active {
+            display: block;
+        }
+
+        .dropdown-menu button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            text-align: left;
+            background: none;
+            border: none;
+            border-bottom: 1px solid #000;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        .dropdown-menu button:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-menu button:hover {
+            background-color: #eee;
+        }
+
+        /* Lista de Posts */
+        .posts-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto;
+            max-height: 70vh;
+        }
+
+        .post-item {
+            display: flex;
+            padding: 12px 15px;
+            border-bottom: 1px solid #ccc;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .post-item:last-child {
+            border-bottom: none;
+        }
+
+        .post-votes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 14px;
+            font-weight: bold;
+            min-width: 40px;
+        }
+
+        .post-title {
+            font-size: 14px;
+            word-break: break-word;
+        }
+
+        .post-title a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .post-title a:hover {
+            text-decoration: underline;
+        }
+
+        /* Botón de Añadir (+) */
+        .add-lane-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #000;
+            background: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 10px;
+        }
+
+        .add-lane-btn:hover {
+            background-color: #eee;
+        }
+
+        /* Modal para añadir subreddit */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+            z-index: 100;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-box {
+            background: #fff;
+            border: 2px solid #000;
+            border-radius: 12px;
+            padding: 20px;
+            width: 300px;
+        }
+
+        .modal-box h3 {
+            margin-top: 0;
+            font-size: 16px;
+        }
+
+        .modal-box input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #000;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        .modal-box button {
+            width: 100%;
+            padding: 12px;
+            background: #000;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .modal-box button:hover {
+            background: #333;
+        }
+
+        /* Mensajes de estado */
+        .loading-text,
+        .error-text {
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .error-text {
+            color: #d32f2f;
+        }
